@@ -1,0 +1,180 @@
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fffcf0; /* Subtle yellow background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 650px; /* Narrower for better readability */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: normal;
+    color: #111;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header & Navigation */
+header {
+    margin-bottom: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Articles */
+.recent-articles ul, .articles-list ul, .article-year ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-articles li, .article-year li {
+    margin-bottom: 1.2rem;
+}
+
+.date {
+    color: #777;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 3px;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+.article-content {
+    max-width: 650px;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 2rem 0;
+    padding: 0.5rem 1rem;
+    border-left: 1px solid #eee8d5;
+    font-style: italic;
+    color: #555;
+}
+
+/* Code elements */
+pre, code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: #f9f8f3;
+    border-radius: 2px;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 0.8rem;
+    overflow-x: auto;
+    line-height: 1.45;
+    margin: 1.5rem 0;
+}
+
+pre code {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Article specific */
+.article-title {
+    margin-bottom: 0.25rem;
+}
+
+.article-date {
+    margin-bottom: 1.5rem;
+}
+
+/* Contact links */
+.contact-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.contact-links li {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 25px 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+} 

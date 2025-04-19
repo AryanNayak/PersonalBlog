@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the Hierarchy of Java Stream - Aryan Nayak</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aryan Nayak</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <article class="article-content">
+                <h2 class="article-title">Understanding the Hierarchy of Java Stream</h2>
+                <div class="article-date">February 5, 2023</div>
+                
+                <p>
+                    When we write code for java streams, we take a source, apply intermediate operations to it, and add a terminal operation.
+                </p>
+                
+                <p>
+                    These intermediate operations can be filtering out even elements, sorting all the elements or having distinct elements.
+                </p>
+                
+                <p>
+                    In the terminal operations, you can have operations like the sum/average of all the elements or simply adding the items in a collection.
+                </p>
+                
+                <p>
+                    Using stream makes the code clean, readable and also efficient due to lazy evaluation. It creates a pipeline of functions where all the elements go through these functions in one go. This pipeline does not have any storage, it's only an abstraction over the given source.
+                </p>
+                
+                <h3>Hierarchy of streams:</h3>
+                
+                <p>
+                    There are mainly 5 interfaces of streams:
+                </p>
+                
+                <ul>
+                    <li><strong>BaseStream</strong>: It provides methods like parallel(), sequential() and unordered().</li>
+                    <li><strong>IntStream</strong>: It is used for streams of primitive int.</li>
+                    <li><strong>LongStream</strong>: It is used for streams of primitive long.</li>
+                    <li><strong>DoubleStream</strong>: It is used for streams of primitive double.</li>
+                    <li><strong>Stream&lt;T&gt;</strong>: It is used for non-primitives.</li>
+                </ul>
+                
+                <p>
+                    Some common methods of all these interfaces are:
+                </p>
+                
+                <p>
+                    <strong>filter()</strong>: It is an intermediate operation, that takes a predicate as an argument and filters out the element according to the given predicate.
+                </p>
+                
+                <p>
+                    <strong>sorted()</strong>: It is an intermediate operation, that takes a stream and returns the sorted version of that stream.
+                </p>
+                
+                <p>
+                    <strong>forEach()</strong>: It is a terminal method and takes an action as an argument, and performs the given action on each element of the stream.
+                </p>
+                
+                <p>
+                    <strong>findFirst()</strong>: It is a terminal operation that is used to find the first element of the stream.
+                </p>
+                
+                <p>
+                    <strong>collect()</strong>: It is a terminal operation that is used to convert a stream into a collection. (for example, if you want to get the data in a collection like an ArrayList, you can use the collect() method)
+                </p>
+                
+                <p>
+                    The below methods are available only in IntStream, LongStream and DoubleStream:
+                </p>
+                
+                <p>
+                    <strong>sum()</strong>: It is used to get the sum of all the elements in the stream.
+                </p>
+                
+                <p>
+                    <strong>average()</strong>: It is used to get the average of all the elements in the stream.
+                </p>
+                
+                <p>
+                    <strong>boxed()</strong>: It is used to create a stream which is a non-primitive stream. (for example Long or Integer)
+                </p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>© 2025 Aryan Nayak</p>
+        </footer>
+    </div>
+</body>
+</html> 
